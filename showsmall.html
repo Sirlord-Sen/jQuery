@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above three meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <title>Bootstrap 101 Template</title>
+
+        <!-- Bootsrap -->
+        <link href="bootstrap-4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        
+
+        <!-- HTML5 shim and Respond.js for IE8 support of the HTML5 elememts and media queries -->
+        <!-- WARNING: Respond.js deosnt work if you view the page via file:// -->
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family: Raleway, Arial;
+            }
+            
+            .content {
+                height: 600px;
+                background-color: #e0e0e0;
+            }
+            
+            .about {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 100px 0;
+                transform-style: preserve-3d;
+                transform: perspective(800px);
+            }
+            
+            .about h2 {
+                text-transform: uppercase;
+                font-size: 50px;
+                font-weight: 400;
+            }
+            
+            .about h2, .about p {
+                transition: all 0.8s ease;
+            }
+            
+            .about.hidden h2 {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(-40deg);
+            }
+            .about.hidden p {
+                opacity: 0;
+                transform: translate3d(0, 0, 400px) rotateY(40deg);
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="content"></div>
+            <div class="about hidden">
+                <h2>This is a heading</h2>
+                <p>Every believer was created by God to succeed. No particular person was created for success. In the first book of the bible, we learn that the first mandate God gave to man was for man to be successful.
+                So God created man in His own image, in the image of God created he him; male and female created he them.
+                And God blessed them, and God said unto them, Be fruitful, and multiply…
+                Genesis 1:27-28 KJV
+                Firstly, God created mankind in His image and likeness. God’s image and likeness has to do with the way God behaves. In other words, God put what makes Him God into man. Also, man had no hand in his creation as to how he was created.
+                </p>
+            </div>
+        <div class="content"></div>
+        
+        <!-- jQuery (necessary fr bootstrap's JavaScript plugins) -->
+        <script src="jquery-3.3.1.js"></script>
+        
+        <!-- Bootstrap of the JS -->
+        <script src="bootstrap-4.1.3/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function(){
+                
+                var aboutEl = $('div.about'),
+                    aboutElOffset = aboutEl.offset().top/2.7,
+                    documentEl = $(document);
+                
+                documentEl.on('scroll', function(){
+                   if ( documentEl.scrollTop() > aboutElOffset )
+                       aboutEl.removeClass('hidden');
+                });
+                 
+            });
+            
+            
+        
+            
+        
+        </script>
+    </body>
+    
+</html>

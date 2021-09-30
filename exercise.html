@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Selector Exercise</title>
+    </head>
+    
+    <body>
+        
+        <h1>jQuery Selector Exercise</h1>
+        
+        <div>Div 1</div>
+        <div class="highlight">Div 2</div>
+        <div id="third">Div 3</div>
+        <div class="highlight">Div 4</div>
+        
+        <script src="jquery-3.3.1.js"></script>
+        <script>
+            $('div').css("background", "purple");
+            $('div.highlight').css("width", "200px");
+            $('div#third').css("border", "solid 1px orange");
+            $('div:first-of-type').css("color","pink");
+        </script>
+    </body>
+</html>
